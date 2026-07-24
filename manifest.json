@@ -1,11 +1,14 @@
 {
   "id": "one-pace",
   "name": "One Pace",
-  "description": "First-class One Pace support for Seanime — overrides episode metadata and syncs AniList progress based on One Pace episode mappings.",
   "version": "1.0.0",
-  "author": "One Pace Extension",
-  "entry": "https://raw.githubusercontent.com/FutureDeveloperZ/one-pace/refs/heads/main/code.js",
-  "type": "hooks",
+  "manifestURI": "",
+  "language": "typescript",
+  "type": "plugin",
+  "description": "First-class One Pace support for Seanime — overrides episode metadata and syncs AniList progress based on One Pace episode mappings.",
+  "author": "Wolfkid200444",
+  "lang": "en",
+  "payloadURI": "https://raw.githubusercontent.com/FutureDeveloperZ/one-pace/refs/heads/main/code.js",
   "plugin": {
     "version": "1",
     "permissions": {
