@@ -1,0 +1,19 @@
+manifest.json
+  s_6c8f323a4bf7bf::t_1c1e95045df38d 5-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "937c03810f02e68cbfb503e59d3700153b4b22f3",
+  "prompts": {},
+  "sessions": {
+    "s_6c8f323a4bf7bf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06a979beeffeYoirYtKVcp9R5W",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
