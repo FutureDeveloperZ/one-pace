@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "build": "deno run --allow-all build.ts",
+    "update-data": "python3 scripts/update-episodes.py"
+  },
+  "imports": {
+    "esbuild": "npm:esbuild@^0.28.1"
+  }
+}
