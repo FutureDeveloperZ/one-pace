@@ -1,0 +1,26 @@
+deno.json
+  s_6c8f323a4bf7bf::t_ea8611ef4c1ed2 1-4,8-9
+  s_6c8f323a4bf7bf::t_3dfd3192d4ae3d 5-7
+scripts/update-episodes.py
+  s_6c8f323a4bf7bf::t_5e550a7c0d1e89 1-137
+.github/workflows/update-one-pace-data.yml
+  s_6c8f323a4bf7bf::t_db2ef3049a5ec2 1-56
+deno.lock
+  s_6c8f323a4bf7bf::t_fcc62f3e329d8f 1-176
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "fd8a935790e77dff4ba18a5ec052edaf28242d55",
+  "prompts": {},
+  "sessions": {
+    "s_6c8f323a4bf7bf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06a979beeffeYoirYtKVcp9R5W",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
