@@ -1,0 +1,27 @@
+src/hooks/episodes.ts
+  s_6c8f323a4bf7bf::t_18790c617000f0 2,5,12-16,20-21,28
+src/hooks/metadata.ts
+  s_6c8f323a4bf7bf::t_49696de94d1299 4
+src/hooks/progress.ts
+  s_6c8f323a4bf7bf::t_a2464fdf6e8012 4
+src/index.ts
+  s_6c8f323a4bf7bf::t_70967c82e59643 20,30-34
+code.js
+  s_6c8f323a4bf7bf::t_7cd1695a76ba11 7283,7288-7290,7334,7350,7376,7384-7388
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "34ad2fd770729f26055765e52293222724b2775f",
+  "prompts": {},
+  "sessions": {
+    "s_6c8f323a4bf7bf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06a979beeffeYoirYtKVcp9R5W",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
