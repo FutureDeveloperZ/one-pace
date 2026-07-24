@@ -3,34 +3,6 @@
 (() => {
   // src/constants.ts
   var ONE_PIECE_ANILIST_ID = 2185;
-  var FILENAME_PATTERN = /\[One Pace\]\[(\d+)-(\d+)\]\s+(.+?)\s+(\d+)\s+\[(\d+p)\]/i;
-
-  // src/detection.ts
-  function detectOnePaceFiles() {
-    const allFiles = $database.localFiles.getAll();
-    const onePieceFiles = allFiles.filter((lf) => lf.mediaId === ONE_PIECE_ANILIST_ID);
-    const detected = [];
-    for (const file of onePieceFiles) {
-      const match = FILENAME_PATTERN.exec(file.path);
-      if (match) {
-        detected.push({
-          path: file.path,
-          paceEpRange: {
-            start: parseInt(match[1], 10),
-            end: parseInt(match[2], 10)
-          },
-          arcName: match[3].trim(),
-          epNumber: match[4],
-          resolution: match[5]
-        });
-      }
-    }
-    return detected;
-  }
-  function hasOnePaceFiles() {
-    const allFiles = $database.localFiles.getAll();
-    return allFiles.some((lf) => lf.mediaId === ONE_PIECE_ANILIST_ID && lf.path.includes("[One Pace]"));
-  }
 
   // data/episodes.json
   var episodes_default = {
@@ -7308,17 +7280,14 @@
 
   // src/hooks/episodes.ts
   function registerEpisodeHooks() {
-    const isOnePaceDetected = hasOnePaceFiles();
-    if (!isOnePaceDetected) {
-      console.log("[One Pace] No One Pace files detected, skipping episode hooks");
-      return;
-    }
-    console.log("[One Pace] One Pace files detected, registering episode hooks");
+    console.log("[One Pace] Registering episode hooks");
     $app.onAnimeEpisodeMetadataRequested((e) => {
       if (e.mediaId !== ONE_PIECE_ANILIST_ID) {
         return e.next();
       }
-      const files = $database.localFiles.findBy((lf) => lf.mediaId === ONE_PIECE_ANILIST_ID);
+      const files = $database.localFiles.findBy(
+        (lf) => lf.mediaId === ONE_PIECE_ANILIST_ID
+      );
       const matchingFile = files.find((lf) => {
         const match2 = /\[One Pace\]\[(\d+)-(\d+)\]/i.exec(lf.path);
         if (!match2) return false;
@@ -7336,7 +7305,6 @@
       const opEnd = parseInt(match[2], 10);
       const mapping = getEpisodeForOPRange(opStart, opEnd);
       if (!mapping) {
-        console.log(`[One Pace] No mapping found for OP ${opStart}-${opEnd}`);
         return e.next();
       }
       const overview = buildOverview(mapping);
@@ -7363,12 +7331,7 @@
 
   // src/hooks/metadata.ts
   function registerMetadataHooks() {
-    const isOnePaceDetected = hasOnePaceFiles();
-    if (!isOnePaceDetected) {
-      console.log("[One Pace] No One Pace files detected, skipping metadata hooks");
-      return;
-    }
-    console.log("[One Pace] One Pace files detected, registering metadata hooks");
+    console.log("[One Pace] Registering metadata hooks");
     $app.onGetAnime((e) => {
       if (e.anime?.id !== ONE_PIECE_ANILIST_ID) {
         return e.next();
@@ -7384,12 +7347,7 @@
 
   // src/hooks/progress.ts
   function registerProgressHooks() {
-    const isOnePaceDetected = hasOnePaceFiles();
-    if (!isOnePaceDetected) {
-      console.log("[One Pace] No One Pace files detected, skipping progress hooks");
-      return;
-    }
-    console.log("[One Pace] One Pace files detected, registering progress hooks");
+    console.log("[One Pace] Registering progress hooks");
     $app.onPreUpdateEntryProgress((e) => {
       if (e.mediaId !== ONE_PIECE_ANILIST_ID) {
         return e.next();
@@ -7404,8 +7362,6 @@
 
   // src/index.ts
   console.log("[One Pace] Plugin loaded");
-  var detectedFiles = detectOnePaceFiles();
-  console.log(`[One Pace] Detected ${detectedFiles.length} One Pace files`);
   registerEpisodeHooks();
   registerMetadataHooks();
   registerProgressHooks();
@@ -7417,7 +7373,7 @@
     });
     tray.render(() => {
       tray.stack([
-        tray.text(`One Pace \u2014 ${detectedFiles.length} files detected`),
+        tray.text("One Pace extension active"),
         tray.button("Rescan Files", { onClick: "rescan" })
       ], { gap: 8 });
     });
@@ -7425,9 +7381,11 @@
       tray.open();
     });
     ctx.registerEventHandler("rescan", () => {
-      const files = detectOnePaceFiles();
-      console.log(`[One Pace] Rescanned: ${files.length} files`);
-      ctx.toast.success(`Found ${files.length} One Pace files`);
+      const count = $database.localFiles.findBy(
+        (lf) => lf.mediaId === 2185 && lf.path.includes("[One Pace]")
+      ).length;
+      console.log(`[One Pace] Rescanned: ${count} files`);
+      ctx.toast.success(`Found ${count} One Pace files`);
     });
   });
 })();

@@ -1,12 +1,8 @@
 import { registerEpisodeHooks } from './hooks/episodes';
 import { registerMetadataHooks } from './hooks/metadata';
 import { registerProgressHooks } from './hooks/progress';
-import { detectOnePaceFiles } from './detection';
 
 console.log("[One Pace] Plugin loaded");
-
-const detectedFiles = detectOnePaceFiles();
-console.log(`[One Pace] Detected ${detectedFiles.length} One Pace files`);
 
 registerEpisodeHooks();
 registerMetadataHooks();
@@ -21,7 +17,7 @@ $ui.register((ctx) => {
 
   tray.render(() => {
     tray.stack([
-      tray.text(`One Pace — ${detectedFiles.length} files detected`),
+      tray.text("One Pace extension active"),
       tray.button("Rescan Files", { onClick: "rescan" }),
     ], { gap: 8 });
   });
@@ -31,8 +27,10 @@ $ui.register((ctx) => {
   });
 
   ctx.registerEventHandler("rescan", () => {
-    const files = detectOnePaceFiles();
-    console.log(`[One Pace] Rescanned: ${files.length} files`);
-    ctx.toast.success(`Found ${files.length} One Pace files`);
+    const count = $database.localFiles.findBy(
+      (lf: any) => lf.mediaId === 2185 && lf.path.includes("[One Pace]")
+    ).length;
+    console.log(`[One Pace] Rescanned: ${count} files`);
+    ctx.toast.success(`Found ${count} One Pace files`);
   });
 });

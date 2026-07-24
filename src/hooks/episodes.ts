@@ -1,36 +1,31 @@
 import { ONE_PIECE_ANILIST_ID } from '../constants';
-import { hasOnePaceFiles } from '../detection';
-import { getEpisodeForOPRange, getDisplayTitle, getProgressNumber, buildOverview } from '../mapping/engine';
+import { getEpisodeForOPRange, getDisplayTitle, buildOverview } from '../mapping/engine';
 
 export function registerEpisodeHooks() {
-  const isOnePaceDetected = hasOnePaceFiles();
-
-  if (!isOnePaceDetected) {
-    console.log("[One Pace] No One Pace files detected, skipping episode hooks");
-    return;
-  }
-
-  console.log("[One Pace] One Pace files detected, registering episode hooks");
+  console.log("[One Pace] Registering episode hooks");
 
   $app.onAnimeEpisodeMetadataRequested((e) => {
     if (e.mediaId !== ONE_PIECE_ANILIST_ID) {
       return e.next();
     }
 
-    const files = $database.localFiles.findBy(lf => lf.mediaId === ONE_PIECE_ANILIST_ID);
-    const matchingFile = files.find(lf => {
+    const files = $database.localFiles.findBy(
+      (lf: any) => lf.mediaId === ONE_PIECE_ANILIST_ID
+    );
+
+    const matchingFile = files.find((lf: any) => {
       const match = /\[One Pace\]\[(\d+)-(\d+)\]/i.exec(lf.path);
       if (!match) return false;
       const fileOpEnd = parseInt(match[2], 10);
-      return fileOpEnd === e.episodeNumber || 
-             (lf.parsedInfo?.episode && parseInt(lf.parsedInfo.episode, 10) === e.episodeNumber);
+      return fileOpEnd === e.episodeNumber ||
+        (lf.parsedInfo?.episode && parseInt(lf.parsedInfo.episode, 10) === e.episodeNumber);
     });
 
     if (!matchingFile) {
       return e.next();
     }
 
-    const match = /\[One Pace\]\[(\d+)-(\d+)\]/i.exec(matchingFile.path);
+    const match = /\[One Pace\]\[(\d+)-(\d+)\]/i.exec((matchingFile as any).path);
     if (!match) {
       return e.next();
     }
@@ -40,7 +35,6 @@ export function registerEpisodeHooks() {
     const mapping = getEpisodeForOPRange(opStart, opEnd);
 
     if (!mapping) {
-      console.log(`[One Pace] No mapping found for OP ${opStart}-${opEnd}`);
       return e.next();
     }
 
