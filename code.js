@@ -2,7 +2,7 @@
 "use strict";
 (() => {
   // src/constants.ts
-  var ONE_PIECE_ANILIST_ID = 2185;
+  var ONE_PIECE_ANILIST_ID = 21;
 
   // data/episodes.json
   var episodes_default = {

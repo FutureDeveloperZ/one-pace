@@ -1,4 +1,4 @@
-export const ONE_PIECE_ANILIST_ID = 2185;
+export const ONE_PIECE_ANILIST_ID = 21;
 
 export const PLUGIN_PREFIX = "[One Pace]";
 
