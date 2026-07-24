@@ -2,7 +2,7 @@
   "id": "one-pace",
   "name": "One Pace",
   "version": "1.0.0",
-  "manifestURI": "",
+  "manifestURI": "https://raw.githubusercontent.com/FutureDeveloperZ/one-pace/refs/heads/main/manifest.json",
   "language": "typescript",
   "type": "plugin",
   "description": "First-class One Pace support for Seanime — overrides episode metadata and syncs AniList progress based on One Pace episode mappings.",
