@@ -1,0 +1,29 @@
+manifest.json
+  s_6c8f323a4bf7bf::t_5c1af3468553c1 15
+  h_0d2b7dea709e7c 4
+src/hooks/progress.ts
+  s_6c8f323a4bf7bf::t_3c90439c7c5ba1 3-4,13,18-73
+code.js
+  s_6c8f323a4bf7bf::t_2c4b315407ce5a 7349,7356,7360-7400
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "0fd16ab00f19220d8539e58b6dc2078b7f2cd610",
+  "prompts": {},
+  "humans": {
+    "h_0d2b7dea709e7c": {
+      "author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_6c8f323a4bf7bf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06a979beeffeYoirYtKVcp9R5W",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
