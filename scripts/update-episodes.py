@@ -12,6 +12,7 @@ SPREADSHEET_ID = "1HQRMJgu_zArp-sLnvFMDzOyjdsht87eFLECxMK858lA"
 EXPORT_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}/export?format=xlsx"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_PATH = os.path.join(SCRIPT_DIR, "..", "data", "episodes.json")
+MANIFEST_PATH = os.path.join(SCRIPT_DIR, "..", "manifest.json")
 
 
 def download_spreadsheet():
@@ -107,6 +108,26 @@ def parse_episodes(xlsx_path):
     return arc_overview, all_episodes
 
 
+def bump_patch_version():
+    """Read manifest.json, bump the minor version (X.X.0 -> X.(X+1).0), write back."""
+    with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    version = manifest.get("version", "1.0.0")
+    parts = version.split(".")
+    if len(parts) == 3:
+        parts[1] = str(int(parts[1]) + 1)
+        parts[2] = "0"
+        manifest["version"] = ".".join(parts)
+    else:
+        manifest["version"] = "1.0.0"
+
+    with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+
+    print(f"Version bumped to {manifest['version']}")
+
+
 def main():
     xlsx_path = None
     try:
@@ -124,6 +145,8 @@ def main():
 
         print(f"Extracted {len(episodes)} episodes across {len(arcs)} arcs")
         print(f"Written to {OUTPUT_PATH}")
+
+        bump_patch_version()
 
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
