@@ -1,0 +1,23 @@
+scripts/update-episodes.py
+  s_6c8f323a4bf7bf::t_a32dd6abf6ce83 15
+  s_6c8f323a4bf7bf::t_d38b3253b032d1 112,119-120
+  s_6c8f323a4bf7bf::t_84cfb7d29b9cfe 111,113-118,121-122,124-130,149
+  s_6c8f323a4bf7bf::t_de9c0c185c2e4f 123
+  s_6c8f323a4bf7bf::t_adb4615f27b1e0 150
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "09cd745523fc66e7303c153f0ea072444d82adab",
+  "prompts": {},
+  "sessions": {
+    "s_6c8f323a4bf7bf": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06a979beeffeYoirYtKVcp9R5W",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
