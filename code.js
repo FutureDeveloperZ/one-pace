@@ -857,7 +857,7 @@
         opStart: 80,
         opEnd: 81,
         opEpisodesRaw: "Ep. 80-81",
-        lengthMinutes: 33.1
+        lengthMinutes: 32
       },
       {
         arc: "Drum Island",
