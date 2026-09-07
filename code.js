@@ -2575,7 +2575,7 @@
         opStart: 313,
         opEnd: 314,
         opEpisodesRaw: "Ep. 313-314",
-        lengthMinutes: 27
+        lengthMinutes: 27.8
       },
       {
         arc: "Post-Enies Lobby",
@@ -3805,7 +3805,7 @@
         opStart: 523,
         opEnd: 524,
         opEpisodesRaw: "Ep. 523-524",
-        lengthMinutes: 26.1
+        lengthMinutes: 31.1
       },
       {
         arc: "Fishman Island",
