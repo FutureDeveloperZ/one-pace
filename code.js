@@ -932,7 +932,7 @@
         opStart: 88,
         opEnd: 90,
         opEpisodesRaw: "Ep. 88-90",
-        lengthMinutes: 33.5
+        lengthMinutes: 33.2
       },
       {
         arc: "Drum Island",
@@ -996,7 +996,7 @@
         opStart: 96,
         opEnd: 98,
         opEpisodesRaw: "Ep.\xA096-98",
-        lengthMinutes: 26
+        lengthMinutes: 24.3
       },
       {
         arc: "Alabasta",
@@ -1011,7 +1011,7 @@
         opStart: 98,
         opEnd: 103,
         opEpisodesRaw: "Ep.\xA098, 100-101, 103",
-        lengthMinutes: 25.2
+        lengthMinutes: 25.1
       },
       {
         arc: "Alabasta",
