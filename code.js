@@ -110,7 +110,7 @@
         paceEpisodeCount: 3
       },
       "Wano (WIP)": {
-        paceEpisodeCount: 61
+        paceEpisodeCount: 62
       },
       "Egghead (WIP)": {
         paceEpisodeCount: 21
@@ -947,7 +947,7 @@
         opStart: 90,
         opEnd: 91,
         opEpisodesRaw: "Ep. 90-91",
-        lengthMinutes: 29.8
+        lengthMinutes: 29.5
       },
       {
         arc: "Alabasta",
@@ -6896,6 +6896,21 @@
         opEnd: 1032,
         opEpisodesRaw: "Ep. 1028,1031-1032",
         lengthMinutes: 145.2
+      },
+      {
+        arc: "Wano",
+        paceEpisode: "Wano 62",
+        chapters: [
+          {
+            from: "Ch.1012",
+            to: "1013"
+          }
+        ],
+        chaptersRaw: "Ch. 1012-1013",
+        opStart: 1032,
+        opEnd: 1034,
+        opEpisodesRaw: "Ep. 1032-1034",
+        lengthMinutes: 204.6
       },
       {
         arc: "Wano",
