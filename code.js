@@ -1009,8 +1009,8 @@
         ],
         chaptersRaw: "Ch.\xA0159-164",
         opStart: 98,
-        opEnd: 103,
-        opEpisodesRaw: "Ep.\xA098, 100-101, 103",
+        opEnd: 457,
+        opEpisodesRaw: "Ep.\xA098, 100-101, 103, 457",
         lengthMinutes: 25.1
       },
       {
@@ -6914,17 +6914,17 @@
       },
       {
         arc: "Wano",
-        paceEpisode: "Wano 62 Forward",
+        paceEpisode: "Wano 63 Forward",
         chapters: [
           {
-            from: "Ch.1013",
+            from: "Ch.1014",
             to: "1058"
           }
         ],
-        chaptersRaw: "Ch. 1013-1058",
-        opStart: 1033,
+        chaptersRaw: "Ch. 1014-1058",
+        opStart: 1034,
         opEnd: 1085,
-        opEpisodesRaw: "Ep. 1033-1085",
+        opEpisodesRaw: "Ep. 1034-1085",
         lengthMinutes: 0
       },
       {
