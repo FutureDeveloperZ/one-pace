@@ -65,7 +65,7 @@
         paceEpisodeCount: 25
       },
       "Post-Enies Lobby (TBR)": {
-        paceEpisodeCount: 5
+        paceEpisodeCount: 6
       },
       "Thriller Bark  (TBR)": {
         paceEpisodeCount: 22
@@ -113,7 +113,7 @@
         paceEpisodeCount: 62
       },
       "Egghead (WIP)": {
-        paceEpisodeCount: 21
+        paceEpisodeCount: 22
       },
       Totals: {
         paceEpisodeCount: 0
@@ -2583,18 +2583,33 @@
         chapters: [
           {
             from: "Ch.433",
-            to: "435"
+            to: "434"
           }
         ],
-        chaptersRaw: "Ch. 433-435",
+        chaptersRaw: "Ch. 433-434",
         opStart: 315,
         opEnd: 325,
-        opEpisodesRaw: "Ep. 315-316, 319-320,325",
-        lengthMinutes: 39.4
+        opEpisodesRaw: "Ep. 315-316, 325",
+        lengthMinutes: 25.6
       },
       {
         arc: "Post-Enies Lobby",
         paceEpisode: "Post-Enies Lobby 03",
+        chapters: [
+          {
+            from: "Ch.435",
+            to: "Ch.435"
+          }
+        ],
+        chaptersRaw: "Ch. 435",
+        opStart: 316,
+        opEnd: 320,
+        opEpisodesRaw: "Ep. 316-320",
+        lengthMinutes: 15.8
+      },
+      {
+        arc: "Post-Enies Lobby",
+        paceEpisode: "Post Enies Lobby 04",
         chapters: [
           {
             from: "Ch.436",
@@ -2605,11 +2620,11 @@
         opStart: 321,
         opEnd: 322,
         opEpisodesRaw: "Ep. 321-322",
-        lengthMinutes: 29.6
+        lengthMinutes: 23.6
       },
       {
         arc: "Post-Enies Lobby",
-        paceEpisode: "Post-Enies Lobby 04",
+        paceEpisode: "Post-Enies Lobby 05",
         chapters: [
           {
             from: "Ch.438",
@@ -2624,7 +2639,7 @@
       },
       {
         arc: "Post-Enies Lobby",
-        paceEpisode: "Post-Enies Lobby 05",
+        paceEpisode: "Post-Enies Lobby 06",
         chapters: [
           {
             from: "Ch.440",
@@ -7244,17 +7259,32 @@
       },
       {
         arc: "Egghead",
-        paceEpisode: "Egghead 22 Forward",
+        paceEpisode: "Egghead 22",
         chapters: [
           {
             from: "Ch.1095",
+            to: "1096"
+          }
+        ],
+        chaptersRaw: "Ch. 1095-1096",
+        opStart: 1129,
+        opEnd: 1130,
+        opEpisodesRaw: "Ep. 1129-1130",
+        lengthMinutes: 93.9
+      },
+      {
+        arc: "Egghead",
+        paceEpisode: "Egghead 23 Forward",
+        chapters: [
+          {
+            from: "Ch.1097",
             to: "1125"
           }
         ],
-        chaptersRaw: "Ch. 1095-1125",
-        opStart: 1129,
+        chaptersRaw: "Ch. 1097-1125",
+        opStart: 1131,
         opEnd: 1155,
-        opEpisodesRaw: "Ep. 1129\u20141155",
+        opEpisodesRaw: "Ep. 1131\u20141155",
         lengthMinutes: 0
       }
     ]
