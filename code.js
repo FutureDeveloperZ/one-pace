@@ -467,7 +467,7 @@
         opStart: 30,
         opEnd: 30,
         opEpisodesRaw: "Ep. 30",
-        lengthMinutes: 0
+        lengthMinutes: 18.7
       },
       {
         arc: "Arlong Park",
@@ -3835,7 +3835,7 @@
         opStart: 524,
         opEnd: 526,
         opEpisodesRaw: "Ep. 524-526",
-        lengthMinutes: 24.2
+        lengthMinutes: 28.8
       },
       {
         arc: "Fishman Island",
@@ -6895,7 +6895,7 @@
         opStart: 1025,
         opEnd: 1028,
         opEpisodesRaw: "Ep. 1025-1028",
-        lengthMinutes: 86.1
+        lengthMinutes: 26.1
       },
       {
         arc: "Wano",
@@ -6910,7 +6910,7 @@
         opStart: 1028,
         opEnd: 1032,
         opEpisodesRaw: "Ep. 1028,1031-1032",
-        lengthMinutes: 145.2
+        lengthMinutes: 25.2
       },
       {
         arc: "Wano",
@@ -6925,7 +6925,7 @@
         opStart: 1032,
         opEnd: 1034,
         opEpisodesRaw: "Ep. 1032-1034",
-        lengthMinutes: 204.6
+        lengthMinutes: 24.6
       },
       {
         arc: "Wano",
@@ -7255,7 +7255,7 @@
         opStart: 1127,
         opEnd: 1128,
         opEpisodesRaw: "Ep. 1127-1128",
-        lengthMinutes: 88.8
+        lengthMinutes: 28.8
       },
       {
         arc: "Egghead",
@@ -7270,7 +7270,7 @@
         opStart: 1129,
         opEnd: 1130,
         opEpisodesRaw: "Ep. 1129-1130",
-        lengthMinutes: 93.9
+        lengthMinutes: 33.9
       },
       {
         arc: "Egghead",
