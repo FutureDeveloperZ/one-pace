@@ -1768,21 +1768,6 @@
         lengthMinutes: 20.8
       },
       {
-        arc: "Skypiea",
-        paceEpisode: "Skypiea 25 (G8)",
-        chapters: [
-          {
-            from: "Ch.302",
-            to: "303"
-          }
-        ],
-        chaptersRaw: "Ch. 302-303",
-        opStart: 195,
-        opEnd: 207,
-        opEpisodesRaw: "Ep. 195, 207",
-        lengthMinutes: 84.2
-      },
-      {
         arc: "Long Ring Long Land",
         paceEpisode: "Long Ring Long Land 00",
         chapters: [
