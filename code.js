@@ -647,37 +647,52 @@
         opStart: 45,
         opEnd: 49,
         opEpisodesRaw: "Ep. 45,48-49",
-        lengthMinutes: 27.5
+        lengthMinutes: 28.8
+      },
+      {
+        arc: "Loguetown",
+        paceEpisode: "Loguetown 01.5",
+        chapters: [
+          {
+            from: "LoguetownNovel",
+            to: "LoguetownNovel"
+          }
+        ],
+        chaptersRaw: "Loguetown Novel",
+        opStart: 48,
+        opEnd: 50,
+        opEpisodesRaw: "Ep. 48,50",
+        lengthMinutes: 0
       },
       {
         arc: "Loguetown",
         paceEpisode: "Loguetown 02",
         chapters: [
           {
-            from: "Ch.97",
-            to: "Ch.97"
+            from: "Ch.98",
+            to: "99"
           }
         ],
-        chaptersRaw: "Ch. 97",
-        opStart: 48,
-        opEnd: 50,
-        opEpisodesRaw: "Ep. 48, 50",
-        lengthMinutes: 31.4
+        chaptersRaw: "Ch. 98-99",
+        opStart: 51,
+        opEnd: 52,
+        opEpisodesRaw: "Ep. 51-52",
+        lengthMinutes: 20
       },
       {
         arc: "Loguetown",
         paceEpisode: "Loguetown 03",
         chapters: [
           {
-            from: "Ch.98",
-            to: "100"
+            from: "Ch.100",
+            to: "Ch.100"
           }
         ],
-        chaptersRaw: "Ch. 98-100",
+        chaptersRaw: "Ch. 100",
         opStart: 52,
         opEnd: 53,
         opEpisodesRaw: "Ep. 52-53",
-        lengthMinutes: 36.2
+        lengthMinutes: 19.4
       },
       {
         arc: "Reverse Mountain",
